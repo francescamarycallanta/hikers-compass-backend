@@ -1,0 +1,77 @@
+# =============================================================================
+# requirements.txt — the package list for the backend
+#
+# This file lists all the packages the Django backend needs to run.
+# When you run: `pip install -r requirements.txt`, it installs everything below.
+#
+# This ensures every server sets up the same environment,
+# so the project works consistently across machines.
+# =============================================================================
+
+# -------------------------------
+# Core Web Frameworks
+# -------------------------------
+
+Django==4.2.7
+# The main web framework — handles everything from routing to models and admin
+
+djangorestframework==3.14.0
+# Adds API functionality to Django — lets you send/receive JSON to mobile apps
+
+
+# -------------------------------
+# Authentication
+# -------------------------------
+
+djangorestframework-simplejwt==5.3.1
+# Enables JWT (JSON Web Token) authentication — used for logging users in securely
+
+
+# -------------------------------
+# Environment & Secrets Handling
+# -------------------------------
+
+python-decouple==3.8
+# Lets you store secrets (like API keys) in a .env file instead of hardcoding them
+
+
+# -------------------------------
+# CORS Support
+# -------------------------------
+
+django-cors-headers==4.3.1
+# Allows the backend to accept requests from the frontend (React Native app) on a different domain
+
+
+# -------------------------------
+# Database Drivers
+# -------------------------------
+
+psycopg2-binary==2.9.9
+# Lets Django connect to a PostgreSQL database (used in production)
+
+# SQLite is built-in with Python, so no need to list it separately 
+
+
+# -------------------------------
+# HTTP Requests (for Weather API)
+# -------------------------------
+
+requests==2.31.0
+# Used in views.py to connect to external APIs like OpenWeatherMap
+
+
+# -------------------------------
+# Deployment (optional)
+# -------------------------------
+
+gunicorn==21.2.0
+# A Python web server 
+
+
+# -------------------------------
+# Image Handling (optional)
+# -------------------------------
+
+Pillow==10.2.0
+# Used for handling image uploads 
